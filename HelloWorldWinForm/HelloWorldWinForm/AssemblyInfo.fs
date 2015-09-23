@@ -1,4 +1,4 @@
-﻿namespace Library1.AssemblyInfo
+﻿namespace HelloWorldWinForm.AssemblyInfo
 
 open System.Reflection
 open System.Runtime.CompilerServices
@@ -7,11 +7,11 @@ open System.Runtime.InteropServices
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[<assembly: AssemblyTitle("Library1")>]
+[<assembly: AssemblyTitle("HelloWorldWinForm")>]
 [<assembly: AssemblyDescription("")>]
 [<assembly: AssemblyConfiguration("")>]
 [<assembly: AssemblyCompany("")>]
-[<assembly: AssemblyProduct("Library1")>]
+[<assembly: AssemblyProduct("HelloWorldWinForm")>]
 [<assembly: AssemblyCopyright("Copyright ©  2015")>]
 [<assembly: AssemblyTrademark("")>]
 [<assembly: AssemblyCulture("")>]
@@ -22,7 +22,7 @@ open System.Runtime.InteropServices
 [<assembly: ComVisible(false)>]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[<assembly: Guid("fe9aa119-5f00-41ff-a314-cc7fbc196cd2")>]
+[<assembly: Guid("cf08f643-dd49-406e-bb43-197d2c60010b")>]
 
 // Version information for an assembly consists of the following four values:
 // 
