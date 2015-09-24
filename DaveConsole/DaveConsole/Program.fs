@@ -1,4 +1,5 @@
-﻿let PrintNumbers min max =
+﻿
+let PrintNumbers min max =
     // loops are rare, use Array.iter
     for x in min..max do
         printfn "%i" x
