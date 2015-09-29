@@ -106,6 +106,7 @@
     <None Include="packages.config" />
     <Compile Include="CustomValidation.fs" />
     <Compile Include="CrossoverCalculationRequest.fs" />
+    <Compile Include="ButterworthCalculationResult.fs" />
     <Compile Include="CrossoverCalculationController.fs" />
   </ItemGroup>
   <ItemGroup>

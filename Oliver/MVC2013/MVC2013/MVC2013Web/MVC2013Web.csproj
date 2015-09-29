@@ -7,17 +7,16 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{74941CBC-9A94-4800-B15C-4C586620CBF5}</ProjectGuid>
+    <ProjectGuid>{614B2841-8C82-4116-AA90-130FE0FF222D}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FSMVCDemo1Web</RootNamespace>
-    <AssemblyName>FSMVCDemo1Web</AssemblyName>
+    <RootNamespace>MVC2013Web</RootNamespace>
+    <AssemblyName>MVC2013Web</AssemblyName>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
@@ -25,7 +24,6 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <UseGlobalApplicationHostFile />
     <UpgradeBackupLocation />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -197,12 +195,11 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\CrossoverCalculation\ButterworthResult.cshtml" />
     <Content Include="Views\CrossoverCalculation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -215,9 +212,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FSMVCDemo1WebApp\FSMVCDemo1WebApp.fsproj">
+    <ProjectReference Include="..\MVC2013WebApp\MVC2013WebApp.fsproj">
       <Project>{A126575F-C66E-42BF-A70F-655D4C3F0069}</Project>
-      <Name>FSMVCDemo1WebApp</Name>
+      <Name>MVC2013WebApp</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -5,7 +5,6 @@ open System.Web
 open System.Web.Mvc
 open System.Web.Routing
 
-// Record type in F#
 type Route = { controller : string
                action : string
                id : UrlParameter }
