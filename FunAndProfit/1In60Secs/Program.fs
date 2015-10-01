@@ -1,5 +1,49 @@
-﻿printfn "Hello world DH"
+﻿printfn "Hello world"
 //
+
+//If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+//Find the sum of all the multiples of 3 or 5 below 1000.
+
+// list of ints (inclusive)
+let numbersBelow = [1..999]
+
+// iterate.. smell.. should probably do something else
+let mutable sumOfMultiples = 0
+for i in numbersBelow do
+   if i % 3 = 0 then 
+        sumOfMultiples <- sumOfMultiples + i
+   // ahh special case of both.. we don't want to add
+   else
+       if i % 5 = 0 then
+            sumOfMultiples <- sumOfMultiples + i
+
+printfn "SumOfMultiples %i" sumOfMultiples
+// okay so this gives the correct answer of 233,168
+
+
+//sumOfMultiples <- 0
+//for i in numbersBelow do
+let isNotMultipleOf3 x = x%3 <> 0   
+let isNotMultipleOf5 x = x%5 <> 0  
+let list2 = List.filter isNotMultipleOf3 numbersBelow
+let list3 = List.filter isNotMultipleOf5 list2
+let result = List.sum list3
+
+printfn "%A" list3
+printfn "result %i" result
+// giving wrong result of 266,332
+
+//   if isMultipleOf3 i then 
+//        sumOfMultiples <- sumOfMultiples + i
+//   // special case of both.. we don't want to add
+//   else
+//       if isMultipleOf5 i then
+//            sumOfMultiples <- sumOfMultiples + i
+
+//printfn "SumOfMultiples %i" sumOfMultiples
+
+
+
 //// single line comments use a double slash
 //(* multi line comments use (* . . . *) pair
 //
