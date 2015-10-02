@@ -4,18 +4,20 @@
 // list of ints (inclusive)
 let numbers = [1..999]
 
+// Solution1
 // iterate.. smell.. should probably do something else
 let mutable sumOfMultiples = 0
 for i in numbers do
    if i % 3 = 0 then 
         sumOfMultiples <- sumOfMultiples + i
-   // ahh special case of both.. we don't want to add
+   // special case of both.. we don't want to add
    else
        if i % 5 = 0 then
             sumOfMultiples <- sumOfMultiples + i
 
 printfn "SumOfMultiples %i" sumOfMultiples
-// okay so this gives the correct answer of 233,168
+// This gives the correct answer of 233,168
+
 
 // Solution2 - using lists - filter, combining, distinct, sum
 let listOfMultipleOf3 = 
@@ -29,7 +31,8 @@ let listCombined = List.concat [listOfMultipleOf3; listOfMultipleOf5] |> List.di
 let result = List.sum listCombined
 printfn "result %i" result
 
-// Solution3 - make more concise?
+
+// Solution3 - List.filter more concise
 let mul3 = List.filter(fun x -> x%3 = 0) numbers
 let mul5 = List.filter(fun x-> x%5 = 0) numbers
 let result' = 
@@ -38,7 +41,8 @@ let result' =
     |> List.sum
 printfn "result %i" result'
 
-// Solution4 - list.map
+
+// Solution4 - List.map
 // http://theburningmonk.com/2010/09/project-euler-problem-1-solution/
 let total = 
     [1..999] 
@@ -49,7 +53,8 @@ let total =
     |> List.sum
 printfn "result %i" total
 
-// Solution5 - list.filter
+
+// Solution5 - List.filter
 let total' = 
     [1..999] 
     // filter on a function (predicate)
@@ -57,12 +62,6 @@ let total' =
     |> List.sum
 printfn "result %i" total
 
-let sequence = [1..999] |> Seq.filter(fun x -> x%3=0)
-let list = [1..999] |> List.filter(fun x -> x%3=0)
-
-let output x = printfn "%A" x
-output sequence
-output list
 
 // Solution6 - Seq.fold
 // Applies a function to each element of the collection, 
@@ -74,3 +73,12 @@ let problem1 =
        |> Seq.fold (+) 0      
 
 printfn "Problem 1 = %d" problem1
+
+
+// Sequences and Lists exploring
+let sequence = [1..999] |> Seq.filter(fun x -> x%3=0)
+let list = [1..999] |> List.filter(fun x -> x%3=0)
+
+let output x = printfn "%A" x
+output sequence
+output list
