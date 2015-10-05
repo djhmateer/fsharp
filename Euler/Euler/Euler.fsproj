@@ -48,8 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Euler1.fs" />
     <None Include="App.config" />
+    <Compile Include="Euler1.fs" />
+    <Compile Include="Euler2.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
