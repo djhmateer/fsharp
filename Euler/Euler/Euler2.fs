@@ -9,25 +9,25 @@ printfn "Hello Euler2"
 //for i in 1..10 do
 
 // Solution 1 - first iterative try
-let mutable currentSum = 0
-let mutable i = 0
-let mutable p1 = 0
-let mutable p2 = 0
+let mutable currentSum = 2
+//let mutable i = 0
+let mutable p1 = 1
+let mutable p2 = 2
 let mutable result = 0
 
 while currentSum <= 4000000 do
-    if i = 1 then 
-        p1 <- 1
-    if i = 2 then 
-        p1 <- 1
-        p2 <- 1
+//    if i = 1 then 
+//        p1 <- 1
+//    if i = 2 then 
+//        p1 <- 1
+//        p2 <- 1
     currentSum <- p1+p2
     printfn "%A" currentSum
     // setting previous1 and 2
     p2 <- p1
     p1 <- currentSum
 
-    i <- (i + 1)
+//    i <- (i + 1)
 
     let isEven a = a%2 = 0
     if isEven currentSum then
