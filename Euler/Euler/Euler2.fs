@@ -7,6 +7,8 @@ module Euler2
 printfn "Hello Euler2"
 
 //for i in 1..10 do
+
+// Solution 1 - first iterative try
 let mutable currentSum = 0
 let mutable i = 0
 let mutable p1 = 0
@@ -16,7 +18,6 @@ let mutable result = 0
 while currentSum <= 4000000 do
     if i = 1 then 
         p1 <- 1
-        p2 <- 0
     if i = 2 then 
         p1 <- 1
         p2 <- 1
@@ -34,3 +35,9 @@ while currentSum <= 4000000 do
     
 printfn "%A" result
 // 4,613,732
+
+// Solution 2 - look for a better way
+// recursion....hmm
+// how do I make this sequence?????
+// 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+
