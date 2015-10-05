@@ -74,6 +74,9 @@ let problem1 =
 
 printfn "Problem 1 = %d" problem1
 
+// solution 7
+
+
 
 // Sequences and Lists exploring
 let sequence = [1..999] |> Seq.filter(fun x -> x%3=0)
