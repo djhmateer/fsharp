@@ -3,41 +3,33 @@
 //By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
 module Euler2
+// using a top level function as debugging experience better
+let Main() =
+    printfn "Hello Euler2"
 
-printfn "Hello Euler2"
+    // Solution 1 - iterative try..  where: b a currentSum
+    let mutable currentSum = 0
+    let mutable a = 1
+    let mutable b = 0
+    let mutable result = 0
 
-//for i in 1..10 do
+    while currentSum <= 4000000 do
+        currentSum <- a+b
+        printfn "%A" currentSum
+        b <- a
+        a <- currentSum
 
-// Solution 1 - first iterative try
-let mutable currentSum = 2
-//let mutable i = 0
-let mutable p1 = 1
-let mutable p2 = 2
-let mutable result = 0
-
-while currentSum <= 4000000 do
-//    if i = 1 then 
-//        p1 <- 1
-//    if i = 2 then 
-//        p1 <- 1
-//        p2 <- 1
-    currentSum <- p1+p2
-    printfn "%A" currentSum
-    // setting previous1 and 2
-    p2 <- p1
-    p1 <- currentSum
-
-//    i <- (i + 1)
-
-    let isEven a = a%2 = 0
-    if isEven currentSum then
-        result <- result + currentSum
+        let isEven x = x%2 = 0
+        if isEven currentSum then
+            result <- result + currentSum
     
-printfn "%A" result
-// 4,613,732
+    printfn "%A" result
+    // 4,613,732
 
 // Solution 2 - look for a better way
 // recursion....hmm
 // how do I make this sequence?????
 // 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+
+Main()
 
