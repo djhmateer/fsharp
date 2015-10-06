@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>EulerCSharp.Euler206</StartupObject>
+    <StartupObject>EulerCSharp.Euler2</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Euler2.cs" />
     <Compile Include="Euler206.cs" />
     <Compile Include="Euler1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
