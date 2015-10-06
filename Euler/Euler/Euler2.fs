@@ -5,7 +5,6 @@
 module Euler2
 // using a top level function as debugging experience better
 let Main() =
-    printfn "Hello Euler2"
 
     // Solution 1 - iterative try..  where: b a currentSum
     let mutable currentSum = 0
@@ -15,21 +14,39 @@ let Main() =
 
     while currentSum <= 4000000 do
         currentSum <- a+b
-        printfn "%A" currentSum
+//        printfn "%A" currentSum
         b <- a
         a <- currentSum
 
-        let isEven x = x%2 = 0
-        if isEven currentSum then
+        if (currentSum%2=0) then 
             result <- result + currentSum
     
-    printfn "%A" result
+//    printfn "%A" result
     // 4,613,732
+
+Main()
+let Main2() =
+    // Solution 2 - 
+    let mutable sum = 0
+    let mutable a = 1
+    let mutable b = 1
+    
+    while b < 4000000 do
+        if (b%2=0) then
+            sum <- sum+b
+        let h = a+b
+        a <- b
+        b <- h
+    printfn "%A" sum
+Main2()
+
+    
+
+
 
 // Solution 2 - look for a better way
 // recursion....hmm
 // how do I make this sequence?????
 // 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
-Main()
 
